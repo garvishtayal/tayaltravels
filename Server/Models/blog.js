@@ -1,16 +1,32 @@
 const mongoose = require('mongoose');
 
-// Define the Blog schema
 const blogSchema = new mongoose.Schema({
+  metaTags: {
+    // Add meta tags object
+    keywords: {
+      type: [String],
+    },
+    // Add other meta tag fields as needed
+  },
+  category: {
+    type: String,
+//    required: true,
+  },
   title: {
     type: String,
     required: true,
   },
-  content: {
-    type: String,
-    required: true,
+  headInfo: {
+    // Add head information object
+    headName: {
+      type: String,
+    },
+    headDescription: {
+      type: String,
+    },
+    // Add other head information fields as needed
   },
-  author: {
+  content: {
     type: String,
     required: true,
   },
@@ -19,8 +35,8 @@ const blogSchema = new mongoose.Schema({
     required: true,
   },
   createdAt: {
-    type: Date,
-    default: Date.now,
+    type: String,
+    default: () => new Date().toISOString().split('T')[0], // YYYY-MM-DD format
   },
 });
 

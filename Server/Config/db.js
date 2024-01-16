@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 
 const mongoURI = 'mongodb+srv://garvishtayal:Krih1K0a7UagEm7T@trial.j9vcaxz.mongodb.net/?retryWrites=true&w=majority';
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
 
