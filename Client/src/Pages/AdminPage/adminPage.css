@@ -1,0 +1,161 @@
+.adminPageContainer {
+  padding: 3% 4%;
+
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.headImage {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  background-color: rgba(144, 238, 144, 0.541);
+  z-index: 100;
+}
+.headImageLabelContainer {
+  position: relative;
+}
+.headName {
+  position: absolute;
+  font-family: 'Domine', serif;
+  left: -35%;
+  top: 16%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  letter-spacing: 1px;
+  line-height: 36px;
+  font-size: 28px;
+}
+.headDescription {
+  position: absolute;
+  font-family: 'Domine', serif;
+  height: 30%;
+  left: -35%;
+  top: 40%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+
+  font-size: 15px;
+}
+.blogTitle {
+  margin-top: 3px;
+  padding-top: 40px;
+  height: 40px;
+  font-family: 'Domine', serif;
+  font-weight: 500;
+  font-size: 30px;
+} 
+
+
+.blogContentOne {
+  margin-top: 15px;
+  height: 70px;
+  color: rgb(56, 56, 56);
+  font-family: 'Domine', serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.blogExploreButton {
+  align-self: center;
+  width: 100px;
+  height: 36px;
+  margin-bottom: 20px;
+  
+  background-color: white;
+  color: rgb(15, 151, 15);
+  border: 1px solid rgb(23, 212, 23);
+}
+.blogExploreButton:hover{
+  background-color: rgb(23, 212, 23);
+  color: white;
+  cursor: pointer;
+}
+
+.blogContentTwo {
+  margin-top: 45px;
+  height: 168px;
+  color: rgb(65, 64, 64);
+  font-family: 'Domine', serif;
+  font-size: 15px;
+}
+.blogContentThree {
+  margin-top: 45px;
+  height: 168px;
+  color: rgb(65, 64, 64);
+  font-family: 'Domine', serif;
+  font-size: 15px;
+}
+
+
+
+.blogSubmit {
+  margin-top: 40px;
+  align-self: flex-end;
+  width: 15vh;
+
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  height: 5vh;
+  transition: background-color 0.3s ease;
+}
+.blogSubmit:hover{
+  cursor: pointer;
+  background-color: black;
+}
+
+
+
+/* Custom Underline */
+.customUnderline {
+  align-self: center;
+  border-bottom: 3px solid lightgreen;
+  width: 6%;
+  margin-top: 2px;
+}
+
+/* Fixed textarea styles */
+textarea {
+  outline-color: lightgreen;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fixed Styles for uploadImages */
+.uploadImage {
+  border: dashed 1px black;
+  background-color: white;
+}
+.uploadImageLabelContainer {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  font-weight: 700;
+}
+.uploadImageLabel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uploadImageLabel:hover {
+  cursor: pointer;
+  border: dashed 1px black;
+  background-color: white;
+}
+.ImageInput {
+  display: none;
+}
+
+
+

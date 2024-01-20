@@ -2,36 +2,46 @@ const mongoose = require('mongoose');
 
 const blogSchema = new mongoose.Schema({
   metaTags: {
-    // Add meta tags object
+    metaTitle: {
+      type: String,
+    },
+    metaDescription: {
+      type: String,
+    },
     keywords: {
       type: [String],
     },
-    // Add other meta tag fields as needed
   },
+
   category: {
     type: String,
-//    required: true,
+    required: true,
   },
   title: {
     type: String,
     required: true,
   },
   headInfo: {
-    // Add head information object
     headName: {
       type: String,
     },
     headDescription: {
       type: String,
     },
-    // Add other head information fields as needed
   },
   content: {
-    type: String,
-    required: true,
+    contentOne: {
+      type: String,
+    },
+    contentTwo: {
+      type: String,
+    },
+    contentThree: {
+      type: String,
+    }
   },
   imageUrls: {
-    type: [String], // Assuming an array of image URLs
+    type: [String],
     required: true,
   },
   createdAt: {

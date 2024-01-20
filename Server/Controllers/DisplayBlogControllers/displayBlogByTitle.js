@@ -9,12 +9,12 @@ const s3 = new AWS.S3({
   secretAccessKey: 'YrxtYUP36QqqEPT3sB4xrObRKtVxOEgacMWCJadn57E',
 });
 
-const displayBlogByID = async (req, res) => {
+const displayBlogByTitle = async (req, res) => {
   try {
-    const blogId = req.params.id;
+    const title = req.params.title.toLowerCase().replace(/[^a-z0-9]/g, '-');
 
     // Retrieve the blog post from the database
-    const blog = await Blog.findById(blogId);
+    const blog = await Blog.findOne({title});
 
     if (!blog) {
       return res.status(404).json({ message: 'Blog post not found.' });
@@ -56,4 +56,4 @@ const displayBlogByID = async (req, res) => {
   }
 };
 
-module.exports = { displayBlogByID };
+module.exports = { displayBlogByTitle };

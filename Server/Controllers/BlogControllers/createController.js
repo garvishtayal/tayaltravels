@@ -11,7 +11,26 @@ const s3 = new AWS.S3({
 
 exports.createBlog = async (req, res) => {
   try {
-    const { title, content, images, metaTags, headInfo, category } = req.body;
+    console.log(req.body);
+    const { title, headName, headDescription, category } = req.body;
+    const { metaTitle, metaDescription, keywords} = req.body;
+    const { contentOne, contentTwo, contentThree} = req.body;
+
+    const headInfo = {
+      headName : headName,
+      headDescription : headDescription,
+    }
+    const metaTags = {
+      metaTitle : metaTitle,
+      metaDescription : metaDescription,
+      keywords : keywords,
+    }
+    const content = {
+      contentOne : contentOne,
+      contentTwo : contentTwo,
+      contentThree : contentThree,
+    }
+
 
     // Validate if required fields are present
     if (!title || !content || !category) {
