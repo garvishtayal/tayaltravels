@@ -12,7 +12,7 @@ const s3 = new AWS.S3({
 exports.createBlog = async (req, res) => {
   try {
     console.log(req.body);
-    const { title, headName, headDescription, category } = req.body;
+    const { title, headName, headDescription, category, imageAltTexts, location } = req.body;
     const { metaTitle, metaDescription, keywords} = req.body;
     const { contentOne, contentTwo, contentThree} = req.body;
 
@@ -51,7 +51,7 @@ exports.createBlog = async (req, res) => {
       req.files.map(async (image, index) => {
         const params = {
           Bucket: 'tayaltravels',
-          Key: `${subfolder}/_image_${index + 1}.jpg`,
+          Key: `${subfolder}/_image_${index + 1}.webp`,
           Body: image.buffer,
         };
 
@@ -66,7 +66,9 @@ exports.createBlog = async (req, res) => {
       imageUrls: uploadedImageUrls,
       metaTags,
       headInfo,
-      category, // Include category in the new blog post
+      imageAltTexts,
+      category,
+      location,
     });
 
     const savedBlogPost = await newBlogPost.save();

@@ -1,0 +1,88 @@
+.aboutSectionContainer {
+  height: 90vh;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 95vh;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutSectionContainer .aboutHeading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 45px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.aboutSectionContainer .aboutText {
+  width: 60%;
+  color: rgba(0, 0, 0, 0.849);
+  line-height: 30px;
+  text-align: center;
+}
+
+.aboutMeContainer {
+  background-color: rgba(0, 0, 0, 0.925);
+  height: auto;
+  width: 92%;
+  margin-left: 2.5%;
+  border-end-end-radius: 8px;
+  border-end-start-radius: 8px;
+  padding: 20px;
+  margin-bottom: 50vh;
+
+  display: flex;
+  align-items: center;
+}
+.aboutMeContainer img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 300px;
+  background-color: rgba(245, 245, 245, 0.356);
+}
+.aboutMeContainer span {
+  width: 1px;
+  height: 260px;
+  background-color: rgba(245, 245, 245, 0.466);
+  margin: 0 4%;
+}
+.aboutMeContainer p {
+  color: rgba(245, 245, 245, 0.849);
+
+}
+.socialLinks a {
+  color: whitesmoke;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutSectionContainer {
+    margin-top: 10vh;
+  }
+  .aboutSectionContainer .aboutText {
+    width: 90%;
+  }
+
+  .aboutMeContainer {
+    flex-direction: column;
+    height: auto;
+    width: 85%;
+  }
+  .aboutMeContainer img{
+    height: 200px;
+    width: 200px;
+  }
+  .aboutMeContainer span {
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+  }
+}

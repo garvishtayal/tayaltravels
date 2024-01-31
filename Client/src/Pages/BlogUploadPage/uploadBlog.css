@@ -1,5 +1,6 @@
 .adminPageContainer {
-  padding: 3% 4%;
+  padding: 60px 4%;
+  background-color: white;
 
 }
 form {
@@ -11,9 +12,7 @@ form {
 .headImage {
   width: 100%;
   height: 400px;
-  display: flex;
   background-color: rgba(144, 238, 144, 0.541);
-  z-index: 100;
 }
 .headImageLabelContainer {
   position: relative;
@@ -24,13 +23,15 @@ form {
   left: -35%;
   top: 16%;
   background-color: transparent;
+  color: rgba(255, 255, 255, 0.87);
   border: none;
   outline: none;
 
   letter-spacing: 1px;
-  line-height: 36px;
-  font-size: 28px;
+  line-height: 40px;
+  font-size: 35px;
 }
+
 .headDescription {
   position: absolute;
   font-family: 'Domine', serif;
@@ -40,7 +41,7 @@ form {
   background-color: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.808);
 
   font-size: 15px;
 }
@@ -94,6 +95,36 @@ form {
   font-size: 15px;
 }
 
+
+.blogCategory {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.metaLabel, .categoryLabel {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.metaInput {
+  font-family: 'Domine', serif;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+}
 
 
 .blogSubmit {
@@ -159,3 +190,51 @@ textarea {
 
 
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headImage {
+    height: 190px;
+    margin-top: 10px;
+  }
+  .headName {
+    font-size: 13px;
+    line-height: 14px;
+    top: 65px;
+  }
+  .headDescription {
+    font-size: 8px;
+    top: 95px;
+  } 
+  .blogExploreButton {
+    display: none;
+  }
+  .blogTitle {
+    font-size: 22px;
+    padding-top: 30px;
+  }
+  .blogContentOne{
+    height: 17vh;
+  }
+  .blogContentOne, .blogContentTwo, .blogContentThree {
+    font-size: 10px;
+  }
+  .blogContentTwo {
+    height: 100px;
+    margin-bottom: 0px;
+  }
+  .blogContentThree {
+    margin-top: 15px;
+  }
+  .metaLabel,.categoryLabel {
+    font-size: 12px;
+  }
+  .metaInput, .blogCategory {
+    font-size: 10px;
+  }
+  .blogSubmit {
+    font-size: 12px;
+    width: 85px;
+    height: 30px;
+    border-radius: 4px;
+  }
+}

@@ -17,7 +17,7 @@ const deleteImageByTitle = async (title, index) => {
 
     const deleteParams = {
       Bucket: 'tayaltravels',
-      Key: `${subfolder}/_image_${index}.jpg`,
+      Key: `${subfolder}/_image_${index}.webp`,
     };
 
     await s3.deleteObject(deleteParams).promise();

@@ -44,10 +44,18 @@ const blogSchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
+  imageAltTexts: {
+    type: [String],
+    required: true,
+  },
   createdAt: {
     type: String,
-    default: () => new Date().toISOString().split('T')[0], // YYYY-MM-DD format
+    default: () => new Date().toISOString(),
   },
+  location: {
+    type: String,
+    required: true,
+  }
 });
 
 // Create a Mongoose model using the schema

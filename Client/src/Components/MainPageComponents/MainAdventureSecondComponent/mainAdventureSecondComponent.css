@@ -1,0 +1,116 @@
+.mainAdventureSecondComponent {
+  height: 150vh;
+
+}
+
+.mainAdventureSecondComponent h1 {
+  align-self: center;
+  margin: 0;
+  padding-top: 70px;
+  padding-left: 30%;
+}
+.mainAdventureSecondComponentDes {
+  color: rgba(0, 0, 0, 0.733);
+  margin: 0;
+  font-size: 14px;
+  padding-left: 30%;
+}
+
+.adventureSecondContentContainer {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.adventureSecondContent {
+  height: 60vh;
+  width: 48%;
+  /* min-width: 250px; */
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.adventureSecondContent img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.adventureSecondContentText {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 20%;
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 23, 23);
+  border-radius: 10px;
+  bottom: 25px;
+  transition: all 0.3s ease-out;
+}
+.adventureSecondContent:hover .adventureSecondContentText {
+  bottom: 10px;
+  width: 90%;
+  height: 45%;
+  margin-left: 5%;
+  align-items: flex-start;
+}
+
+.adventureSecondContentText h4 {
+  margin: 0;
+  color: rgba(245, 245, 245, 0.945);
+}
+.adventureSecondContentText p {
+  font-size: 11px;
+  color: rgba(245, 245, 245, 0.699);
+  height: 30px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  display: none;
+}
+.adventureSecondContentText button {
+  background: linear-gradient(to right, lightblue, lightgreen);
+  width: 100%;
+  padding: 8px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease-out;
+  display: none;
+}
+.adventureSecondContentText button:hover {
+  filter: brightness(0.9);
+}
+.adventureSecondContent:hover p, .adventureSecondContent:hover button {
+  display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mainAdventureSecondComponent {
+    padding: 20px;
+    height: auto;
+  }
+  .adventureSecondContentContainer {
+    padding: 0;
+  }
+  .mainAdventureSecondComponent h1, .mainAdventureSecondComponentDes {
+    padding-left: 0;
+  }
+  .mainAdventureSecondComponentDes {
+    margin-bottom: 20px;
+  }
+  .adventureSecondContent {
+    width: 100%;
+    margin-right: 0;
+    height: 50vh;
+  }
+}

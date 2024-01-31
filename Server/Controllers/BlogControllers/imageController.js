@@ -19,7 +19,7 @@ const deleteImageByTitle = async (title, index) => {
 
     const deleteParams = {
       Bucket: 'tayaltravels',
-      Key: `${subfolder}/_image_${index}.jpg`,
+      Key: `${subfolder}/_image_${index}.webp`,
     };
 
     await s3.deleteObject(deleteParams).promise();
@@ -90,7 +90,7 @@ exports.updateImage = async (req, res) => {
 
     const uploadParams = {
       Bucket: 'tayaltravels',
-      Key: `${subfolder}/_image_${index}.jpg`,
+      Key: `${subfolder}/_image_${index}.webp`,
       Body: req.files[0].buffer,
     };
 
