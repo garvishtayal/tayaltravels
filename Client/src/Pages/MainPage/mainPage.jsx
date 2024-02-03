@@ -15,7 +15,7 @@ import Footer from '../../Components/Footer/footer';
 
 
 const MainPage = () => {
-
+  
   const [scrolling, setScrolling] = useState(false);
 
 

@@ -11,7 +11,7 @@ const s3 = new AWS.S3({
 
 const displayBlogByTitle = async (req, res) => {
   try {
-    const title = req.params.title.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    const title = req.params.title.replace(/-/g, ' ');
 
     // Retrieve the blog post from the database
     const blog = await Blog.findOne({title});
@@ -30,7 +30,7 @@ const displayBlogByTitle = async (req, res) => {
         const tempUrl = s3.getSignedUrl('getObject', {
           Bucket: 'tayaltravels',
           Key: key,
-          Expires: 3600, // URL expiration time in seconds (1 hour in this example)
+          Expires: 3600,
         });
 
         return tempUrl;
@@ -46,7 +46,8 @@ const displayBlogByTitle = async (req, res) => {
       imageUrls: imageUrlsWithTempAccess,
       createdAt: blog.createdAt,
       metaTags: blog.metaTags,
-      // Include other blog properties as needed
+      imageAltTexts: blog.imageAltTexts,
+      location: blog.location,
     };
 
     res.status(200).json(responseData);

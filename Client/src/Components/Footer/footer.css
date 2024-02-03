@@ -1,4 +1,7 @@
-/* Footer Styles */
+footer {
+  font-family: 'Poppins';
+}
+
 .footer-head {
   display: flex;
   align-items: center;

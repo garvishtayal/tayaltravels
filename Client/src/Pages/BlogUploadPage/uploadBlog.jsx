@@ -13,6 +13,7 @@ const BlogForm = () => {
       keywords: [],
     },
     category: '',
+    location: '',
     title: 'Blog Title',
     headInfo: {
       headName: '',
@@ -124,7 +125,6 @@ const BlogForm = () => {
             required
           />
 
-          <button className='blogExploreButton'>Explore More</button>
 
           {/* 6 Images Component */}
           <BlogImageSetContainer
@@ -171,7 +171,17 @@ const BlogForm = () => {
             </select>
           </label>
 
-
+          <label className="metaLabel">
+            Location:
+            <input
+              className="metaInput"
+              type="text"
+              name="location"
+              placeholder='Enter blog Location'
+              value={blogData.location}
+              onChange={(e) => eventHandlers.handleLocationChange(e, blogData, setBlogData)}
+            />
+          </label>
 
           <label className="metaLabel">
             Meta Title:

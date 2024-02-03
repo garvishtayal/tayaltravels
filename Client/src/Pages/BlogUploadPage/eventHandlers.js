@@ -9,6 +9,15 @@ export const handleInputChange = (e, prevData, setBlogData) => {
   }));
 };
 
+export const handleLocationChange = (e, prevData, setBlogData) => {
+  const { name, value } = e.target;
+
+  setBlogData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+};
+
 export const handleHeadInputChange = (e, prevData, setBlogData) => {
   const { name, value } = e.target;
 
@@ -114,6 +123,7 @@ export const handleSubmit = async (e, blogData, setBlogData) => {
   const formData = new FormData();
   formData.append('category', blogData.category);
   formData.append('title', blogData.title);
+  formData.append('location', blogData.location);
   formData.append('contentOne', blogData.content.contentOne);
   formData.append('contentTwo', blogData.content.contentTwo);
   formData.append('contentThree', blogData.content.contentThree);

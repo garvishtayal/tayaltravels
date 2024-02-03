@@ -1,0 +1,233 @@
+.blogContainer {
+  padding: 60px;
+  font-family: 'Domine', serif;
+  background-color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* A tag Design */
+.blogContainer a {
+  position: relative;
+  text-decoration: none; 
+   color: rgb(31, 168, 223);
+}
+
+.blogContainer a::before,
+.blogContainer a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #0056b3;
+  transition: all 0.3s ease-in-out;
+}
+
+.blogContainer a::before {
+  transform: translateX(-50%);
+}
+
+.blogContainer a::after {
+  transform: translateX(-50%);
+}
+
+.blogContainer a:hover::before,
+.blogContainer a:hover::after {
+  width: 80%;
+}
+
+
+.mobileOnly {
+  display: none;
+}
+.blogHeadContainer {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(rgb(200, 200, 200), rgb(150, 150, 150));
+  border-radius: 6px;
+  height: 400px;
+}
+.blogHeadContainer img {
+  object-fit: cover;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+}
+.blogHeadContainer h1{
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  font-size: 35px;
+  color: whitesmoke;
+  letter-spacing: 1px;
+  line-height: 40px;
+}
+.blogHeadContainer .customLine {
+  position: absolute;
+  left: 60px;
+  top: 170px;
+  height: 1px;
+  width: 50px;
+  background-color: rgba(245, 245, 245, 0.849);
+}
+.blogHeadContainer p {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  color: whitesmoke;
+  font-size: 13px;
+  width: 400px;
+  line-height: 15px;
+}
+
+
+.blogContainer .titleUnderline {
+  height: 2px;
+  width: 50px;
+  background-color: lightslategray;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.blogContainer .blogDes {
+  font-size: 14px;
+  margin-top: 10px;
+  width: 60%;
+  height: 75px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.blogImageSetContainer img {
+  transition:box-shadow 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+} 
+.imgContainer {
+  position: relative;
+}
+.imgContainer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 6px;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none; 
+}
+
+.imgCaption {
+  position: absolute;
+  bottom: 0px;
+  left: 65px;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  font-size: 14px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.blogImageSetContainer img:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contentTwo, .contentThree {
+  width: 100%;
+  font-size: 16px;
+  color: rgb(65, 64, 64);
+  line-height: 23px;
+}
+.blogContainer .contentTwo {
+  text-align: start;
+  margin-top: 50px;
+
+}
+.blogContainer .contentThree {
+  text-align: left;
+  margin: 0;
+}
+
+.blogMetaInfo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.blogDate,
+.blogLocation {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.blogDate .icon,
+.blogLocation .icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .blogContainer {
+    padding: 60px 15px;
+  }
+  .blogHeadContainer {
+    height: 250px;
+  }
+  .blogHeadContainer h1 {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0;
+    left: 30px;
+    top: 40px;
+  }
+  .blogHeadContainer .customLine {
+    top: 80px;
+    left: 30px;
+    width: 20px;
+  }
+  .blogHeadContainer p {
+    font-size: 8px;
+    width: 150px;
+    line-height: 10px;
+    left: 30px;
+    top: 80px;
+  }
+
+  .blogContainer h2 {
+    font-size: 20px;
+  }
+  .blogContainer .blogDes {
+    width: 80%;
+    font-size: 10px;
+    line-height: 12px;
+    height: 50px;
+  }
+  .blogContainer .contentTwo {
+    margin-top: 20px;
+  }
+  .contentTwo, .contentThree {
+    font-size: 14px;
+  }
+  .blogContainer .contentThree {
+    margin-top: 500px;
+  }
+  .mobileOnly {
+    display: block;
+  }
+  .desktopOnly {
+    display: none;
+  }
+}
