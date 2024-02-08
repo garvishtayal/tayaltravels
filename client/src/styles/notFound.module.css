@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.page404 {
+  /* padding: 40px 0; */
+  background: #fff;
+  font-family: 'Arvo', serif;
+}
+.page404 h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+}
+.page404 p {
+  font-size: 13px;
+  margin: 10px 0px;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins';
+}
+.logo img {
+  width: 100px;
+}
+
+.fourZeroFourBg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+  width: 70%;
+  margin: 0px 15%;
+}
+
+.textCenter {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.795);
+}
+
+.col {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.h2 {
+  font-size: 80px;
+}
+
+.link404 {
+  color: #fff!important;
+  padding: 10px 20px;
+  background: #39ac31;
+  font-size: 14px;
+  margin: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+}
+.link404:hover {
+  text-decoration: underline;
+}
+
+.contantBox404 {
+  margin-top: -50px;
+}

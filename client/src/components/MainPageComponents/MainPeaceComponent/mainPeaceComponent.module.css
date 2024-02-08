@@ -1,0 +1,140 @@
+.mainPeaceContainer {
+  height: 140vh;
+  padding: 0px 60px;
+}
+
+.mainPeaceContainer p {
+  margin: 0px;
+}
+
+.mainPeaceContainer h4 {
+  margin: 0;
+}
+
+.mainPeaceContainer h1 {
+  margin: 0;
+  line-height: 39px;
+  margin-bottom: 10px;
+  padding-top: 60px;
+}
+
+.mainPeaceContainer button {
+  margin-top: 40px;
+  margin-left: -10px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid rgb(6, 66, 122);
+  color: rgb(6, 66, 122);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mainPeaceContainer button:hover {
+  background-color: rgb(6, 66, 122);
+  color: whitesmoke;
+}
+
+.peaceArrowIcon {
+  width: 24px;
+  transform: rotate(45deg);
+}
+
+.mainPeaceOneContainer {
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mainPeaceOneComponent {
+  border-radius: 6px;
+  width: 48%;
+  min-width: 280px;
+  height: 95%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mainPeaceOneComponent:hover,
+.mainPeaceTwoComponent:hover {
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mainPeaceContentText {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.mainPeaceContentImg {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  height: 77%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.peaceImageLoading {
+  opacity: 0.5;
+}
+
+.mainPeaceTwoContainer {
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mainPeaceTwoComponent {
+  min-width: 200px;
+  width: 32%;
+  height: 95%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  /* .mainPeaceOneContainer> :nth-child(2),
+  .mainPeaceTwoContainer> :nth-child(3) {
+    display: none;
+  } */
+  .mainPeaceContainer {
+    padding: 20px 0px;
+    padding-bottom: 20px;
+    height: auto;
+  }
+  .mainPeaceContainer h1 {
+    padding: 60px 30px 20px 30px;
+  }
+  .mainPeaceOneContainer {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 0px;
+  }
+  .mainPeaceTwoContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  .mainPeaceOneComponent {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  .mainPeaceTwoComponent {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  .mainPeaceContainer button {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}

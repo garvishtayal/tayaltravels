@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.footer {
+  font-family: 'Poppins';
+}
+
+.footerHead {
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+}
+
+.footerHead img {
+  width: 150px;
+  margin-left: 30%;
+}
+
+.footerHead h1 {
+  font-size: 2rem;
+}
+
+.footerContainer {
+  background-color: #000;
+  color: rgba(245, 245, 245, 0.877);
+  display: flex;
+  /* flex-wrap: wrap; Allow items to wrap to the next line on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.logoContainer {
+  width: 65px;
+  height: 65px;
+  border-radius: 100px;
+  background-color: #ccc;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.logoContainer img {
+  width: 100%;
+}
+
+.textContainer {
+  flex-grow: 1; /* Allow the text container to take up available space */
+}
+
+.textContainer div {
+  font-size: 15px;
+  /* display: flex; */
+}
+.textContainer div p {
+  margin: 0;
+  margin-right: 20px;
+}
+
+.footerNav {
+  margin-top: 10px;
+}
+
+.footerNav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.footerNav a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: color 0.3s ease;
+}
+
+.footerNav a:hover {
+  color: #ccc;
+}
+
+.joinUsContainer {
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.joinUsContainer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+.subscribeForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribeForm input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  font-family: 'Poppins';
+  outline-color: #ccc;
+}
+
+.subscribeForm button {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Poppins';
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribeForm button:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.footerRightReserved {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footerContainer{
+    flex-direction: column;
+  }
+  .footerNav ul {
+  flex-direction: column;
+  }
+  .footerHead img {
+    margin-left: 5%;
+    width: 120px;
+  }
+  .footerHead h1 {
+    font-size: 1.7rem;
+  }
+
+  .textContainer {
+    margin-top: 20px;
+  }
+  .subscribeForm input {
+    width: 80%;
+  }
+}

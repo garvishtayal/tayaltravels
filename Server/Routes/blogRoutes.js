@@ -9,10 +9,16 @@ const deleteController = require('../Controllers/BlogControllers/deleteControlle
 
 const displayBlogByTitle = require('../Controllers/DisplayBlogControllers/displayBlogByTitle');
 const displayBlogByCategory = require('../Controllers/DisplayBlogControllers/displayBlogbyCategory');
-const displayAllTitles = require('../Controllers/DisplayBlogControllers/displayAllTitles');
+const displayAllBlogs = require('../Controllers/DisplayBlogControllers/displayAllBlogs');
+const displayAllByCategory = require('../Controllers/DisplayBlogControllers/displayAllByCategory')
 
 const imageController = require('../Controllers/BlogControllers/imageController');
 
+const authController = require('../Controllers/AuthController/authController');
+const validateToken = require('../Controllers/AuthController/validateToken')
+
+const searchController = require('../Controllers/Other/searchController')
+const joinController = require('../Controllers/Other/joinController');
 
 
 // Routes for Blog
@@ -23,10 +29,19 @@ router.delete('/blogs/:id', deleteController.deleteBlog);
 // Routes for Fetch Blog
 router.get('/blogs/:title', displayBlogByTitle.displayBlogByTitle);
 router.get('/blogs/c/:category', displayBlogByCategory.displayBlogByCategory);
-router.get('/blogs/title/all', displayAllTitles.displayAllTitlesName);
+router.get('/all', displayAllBlogs.displayAllBlogs);
+router.get('/category', displayAllByCategory.displayAllByCategory);
 
 // Routes to handle Images
 router.put('/blogs/image', upload.array('image'), imageController.updateImage);
 router.delete('/blogs/image', imageController.deleteImage);
+
+// Route for User Validation
+router.post('/owner', authController.login);
+router.post('/validate-token', validateToken.validateToken)
+
+//Other Routes
+router.get('/search', searchController.searchBlogsByTerm);
+router.post('/join', joinController.joinController);
 
 module.exports = router;
