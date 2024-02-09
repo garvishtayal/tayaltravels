@@ -114,7 +114,7 @@ const Panel = () => {
         <FaPowerOff
         onClick={() => {
           localStorage.removeItem('token');
-          router.replace('/');
+          router.push('/');
         }}
           className={styles.powerIcon}
          size={20} />

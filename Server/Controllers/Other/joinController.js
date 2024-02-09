@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const Viewer = require('../../Models/viewer');
+require('dotenv').config();
 
 const joinController = async (req, res) => {
   try {
@@ -35,7 +36,7 @@ const joinController = async (req, res) => {
       secure: true,
       auth: {
         user: 'abhishek@tayaltravels.com',
-        pass: 'Abhishek$tayal832215',
+        pass: process.env.EMAIL_PASS,
       },
     });
     const pdfFilePath = 'https://tayaltravels.sgp1.cdn.digitaloceanspaces.com/attachments/welcome_kit.pdf';

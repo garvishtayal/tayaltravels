@@ -143,7 +143,6 @@
   cursor: pointer;
   background-color: lightslategray;
 }
-/* YourComponent.module.css */
 
 .successMessage {
   position: fixed;
@@ -166,6 +165,10 @@
 .successMessage.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.logoContainer {
+  height: 100%;
 }
 
 

@@ -19,7 +19,7 @@ const validateToken = require('../Controllers/AuthController/validateToken')
 
 const searchController = require('../Controllers/Other/searchController')
 const joinController = require('../Controllers/Other/joinController');
-
+const viewerData = require('../Controllers/Other/viewerData')
 
 // Routes for Blog
 router.post('/blogs', upload.array('images'), createController.createBlog);
@@ -43,5 +43,6 @@ router.post('/validate-token', validateToken.validateToken)
 //Other Routes
 router.get('/search', searchController.searchBlogsByTerm);
 router.post('/join', joinController.joinController);
+router.get('/viewers', viewerData.getEmailsAndUsernames);
 
 module.exports = router;

@@ -4,6 +4,7 @@ const cors = require('cors');
 const blogRoutes = require('./Routes/blogRoutes');
 const app = express();
 const multer = require('multer');
+require('dotenv').config();
 
 // Middleware
 app.use(cors());

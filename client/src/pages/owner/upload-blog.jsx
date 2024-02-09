@@ -2,9 +2,8 @@ import withAuth from '../../utils/withAuth';
 
 import React, { useState } from 'react';
 import BlogImageSetContainer from '../../components/BlogImageSetContainer/blogImageSetContainer';
-import Navbar from '../../components/Navbar/navbar';
 import '../../components/BlogImageSetContainer/blogImageSetContainer.module.css';
-import * as eventHandlers from '../../../../client/src/components/BlogImageSetContainer/eventHandlers';
+import * as eventHandlers from '../../components/BlogImageSetContainer/eventHandlers';
 import { useRouter } from 'next/router';
 import { FaPowerOff } from "react-icons/fa6";
 
@@ -60,7 +59,7 @@ const BlogForm = () => {
       {/* Header */}
       <div className={`${styles.header} ${styles.uploadHeader}`}>
         <h2>Owner Panel</h2>
-        <div>
+        <div className={styles.logoContainer}>
           <img src='/logoImage.svg'></img>
           <h4>TAYAL TRAVELS</h4>
           <FaPowerOff 

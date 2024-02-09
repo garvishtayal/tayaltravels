@@ -126,6 +126,40 @@
   padding: 20px;
 }
 
+.joinMessage {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: lightslategray; /* Green */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease forwards, fadeOut 0.5s ease forwards 2.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
 @media only screen and (max-width: 768px) {
   .footerContainer{
     flex-direction: column;

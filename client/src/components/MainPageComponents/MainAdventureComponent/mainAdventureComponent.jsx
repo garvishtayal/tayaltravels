@@ -53,7 +53,7 @@ const MainAdventureComponent = () => {
               className={!adventureImageLoaded ? styles.adventureImageLoading : ''}
               onLoad={() => setAdventureImageLoaded(true)}
             />
-            <h4>{blog.title}</h4>
+            <h4>{blog.location}</h4>
             <span></span>
             <p>{blog.content}</p>
           </div>

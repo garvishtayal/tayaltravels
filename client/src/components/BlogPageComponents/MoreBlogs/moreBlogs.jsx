@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import mainStyles from '../../MainPageComponents/MainPageSecondComponent/mainPageSecondComponent.module.css';
 import moreBlogsStyles from './moreBlogs.module.css';
+import { useRouter } from 'next/router';
 
 const styles = {
   ...mainStyles,
@@ -13,6 +14,7 @@ const MoreBlogs = ({category}) => {
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(false); 
   const moreBlogsContainer = useRef(null);
+  const router = useRouter();
 
   const fetchBlogData = async (page) => { // Pass page number to the function
     if (!hasNextPage) {
@@ -97,6 +99,7 @@ const MoreBlogs = ({category}) => {
             <div
               className={styles.mainTrendingItemContainer}
               key={index}
+              onClick={() => router.push(`/blogs/${blog.title.replace(/\s+/g, '-')}`)}
             >
               <img
                 loading='lazy'

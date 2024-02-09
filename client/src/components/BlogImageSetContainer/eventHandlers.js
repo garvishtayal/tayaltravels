@@ -154,7 +154,8 @@ export const handleSubmit = async (e, blogData, setBlogData, handleSuccess) => {
       handleSuccess();
       window.location.reload();
     } else {
-      console.error('Failed to publish blog post');
+      const responseData = await response.json();
+      console.error('Failed to publish blog post:', responseData.message);
     }
   } catch (error) {
     console.error('Error publishing blog post:', error);

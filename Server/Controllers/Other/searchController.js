@@ -1,12 +1,13 @@
 const AWS = require('aws-sdk');
 const Blog = require('../../Models/blog');
+require('dotenv').config();
 
 // AWS SDK Configuration
 const spacesEndpoint = new AWS.Endpoint('sgp1.digitaloceanspaces.com');
 const s3 = new AWS.S3({
   endpoint: spacesEndpoint,
-  accessKeyId: 'DO00WMRPGWKU6M8Y8FTQ',
-  secretAccessKey: 'YrxtYUP36QqqEPT3sB4xrObRKtVxOEgacMWCJadn57E',
+  accessKeyId: process.env.ACCESS_KEY_ID,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
 });
 
 const searchBlogsByTerm = async (req, res) => {

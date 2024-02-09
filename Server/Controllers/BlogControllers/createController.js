@@ -9,32 +9,23 @@ const s3 = new AWS.S3({
   secretAccessKey: 'YrxtYUP36QqqEPT3sB4xrObRKtVxOEgacMWCJadn57E',
 });
 
+
 exports.createBlog = async (req, res) => {
   try {
-    console.log(req.body);
+    // Extracting necessary data from request body
     const { title, headName, headDescription, category, imageAltTexts, location } = req.body;
     const { metaTitle, metaDescription, keywords} = req.body;
     const { contentOne, contentTwo, contentThree} = req.body;
 
-    const headInfo = {
-      headName : headName,
-      headDescription : headDescription,
-    }
-    const metaTags = {
-      metaTitle : metaTitle,
-      metaDescription : metaDescription,
-      keywords : keywords,
-    }
-    const content = {
-      contentOne : contentOne,
-      contentTwo : contentTwo,
-      contentThree : contentThree,
-    }
-
-
     // Validate if required fields are present
-    if (!title || !content || !category) {
+    if (!title || !contentOne || !category) {
       return res.status(400).json({ message: 'All fields (title, content, category) are required.' });
+    }
+
+    // Check if a blog with the same title already exists
+    const existingBlog = await Blog.findOne({ title });
+    if (existingBlog) {
+      return res.status(400).json({ message: 'A blog with the same title already exists.' });
     }
 
     // Validate if at least one image is provided
@@ -60,17 +51,30 @@ exports.createBlog = async (req, res) => {
       })
     );
 
+    // Create new blog post
     const newBlogPost = new Blog({
       title,
-      content,
+      content: {
+        contentOne,
+        contentTwo,
+        contentThree
+      },
       imageUrls: uploadedImageUrls,
-      metaTags,
-      headInfo,
+      metaTags: {
+        metaTitle,
+        metaDescription,
+        keywords
+      },
+      headInfo: {
+        headName,
+        headDescription
+      },
       imageAltTexts,
       category,
       location,
     });
 
+    // Save the new blog post
     const savedBlogPost = await newBlogPost.save();
 
     res.status(201).json(savedBlogPost);
